@@ -24,29 +24,29 @@ nav {
     top: 0;
     width: 100%;
     background: rgba(255, 255, 255, 0.3);
-    padding: 1rem 5%; /* Increased padding */
+    padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    height: 60px; /* Slightly taller navbar */
+    height: 60px; 
 }
 
 .logo {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center horizontally */
-    text-align: center; /* Ensure text is centered */
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
 }
 
 .logo img {
-    width: 100px; /* Slightly smaller logo */
+    width: 100px; 
     height: auto;
-    margin-bottom: 5px; /* Space between image and text */
+    margin-bottom: 5px; 
 }
 
 .logo h3 {
-    font-size: 10px; /* Adjusted font size to fit */
+    font-size: 10px; 
     font-weight: bold;
     color: #333;
     margin: 0;
@@ -55,21 +55,21 @@ nav {
 /* Navigation Links */
 .nav-links {
     display: flex;
-    gap: 2rem; /* Spacing between links */
+    gap: 2rem; 
 }
 
 .nav-links a {
     text-decoration: none;
-    font-weight: 600; /* Increased font weight */
-    font-size: 1rem; /* Increased font size */
+    font-weight: 600; 
+    font-size: 1rem; 
     color: #000;
-    transition: color 0.3s, transform 0.3s; /* Added transition */
+    transition: color 0.3s, transform 0.3s; 
 }
 
 /* Hover Effect for Nav Links */
 .nav-links a:hover {
-    color: #016d1f; /* Change color on hover */
-    transform: scale(1.1); /* Slight scaling effect */
+    color: #016d1f; 
+    transform: scale(1.1); 
 }
 
 /* Hero Section */
@@ -81,22 +81,22 @@ nav {
     align-items: center;
     text-align: center;
     padding: 2rem;
-    color: white;
+    color: rgb(6, 6, 6);
 }
 
 .hero h1 {
-    font-size: 4rem; /* Increased font size */
+    font-size: 6rem;
     margin-bottom: 2rem;
     max-width: 900px;
 }
 
 .cta-button {
     padding: 1rem 2.5rem;
-    background: #016d1f;
-    color: black;
+    background: rgba(1, 109, 31, 0.7);
+    color: rgb(239, 238, 238);
     border: none;
     border-radius: 30px;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: transform 0.3s;
 }
@@ -107,13 +107,15 @@ nav {
 
 /* Categories Section */
 .categories-section {
-    padding: 2rem;
+    padding: rem;
+    margin-left: 200px;
+    margin-right:200px ;
 }
 
 .categories-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 2rem;
     justify-content: center;
 }
 
@@ -144,7 +146,7 @@ nav {
     bottom: 0;
     left: 0;
     width: 100%;
-    margin: 0;
+    margin: 0px;
     padding: 0.5rem;
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
@@ -152,12 +154,40 @@ nav {
     font-size: 1.2rem;
 }
 
+/* Social Media Links*/
+.social-links {
+    position: fixed;
+    left: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.social-links a img {
+    width: 40px;  
+    height: 40px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-links a:hover img {
+    transform: scale(1.1);
+}
+
+
+
 /* Footer */
 footer {
     background: rgba(255, 255, 255, 0.2);
     color: white;
     text-align: center;
-    padding: 1.5rem; /* Reduced padding */
+    padding: 1.5rem; 
     width: 100%;
 }
 
@@ -177,11 +207,11 @@ footer {
     }
 
     .nav-links a {
-        font-size: 0.9rem; /* Slightly smaller font on medium screens */
+        font-size: 0.9rem; 
     }
 }
 
-/* Show menu toggle and hide nav-links on smaller screens */
+
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -220,6 +250,6 @@ footer {
     }
 
     footer {
-        padding: 1rem; /* Smaller footer for mobile */
+        padding: 1rem; 
     }
 }
