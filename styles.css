@@ -1,3 +1,4 @@
+/* Base Styles */
 html, body {
     height: 100vh; /* Force the html and body to fill the viewport */
     overflow: hidden; /* Prevents any scrolling */
@@ -80,7 +81,7 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 2rem;
+    padding: 3rem;
     color: rgb(6, 6, 6);
 }
 
@@ -107,9 +108,10 @@ nav {
 
 /* Categories Section */
 .categories-section {
-    padding: rem;
+    padding: 5rem;
     margin-left: 200px;
-    margin-right:200px ;
+    margin-right: 200px;
+    height: auto; /* Default height on large screens (auto lets content decide) */
 }
 
 .categories-container {
@@ -146,7 +148,7 @@ nav {
     bottom: 0;
     left: 0;
     width: 100%;
-    margin: 0px;
+    margin: 0;
     padding: 0.5rem;
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
@@ -154,7 +156,7 @@ nav {
     font-size: 1.2rem;
 }
 
-/* Social Media Links*/
+/* Social Media Links */
 .social-links {
     position: fixed;
     left: 10px; 
@@ -180,15 +182,15 @@ nav {
     transform: scale(1.1);
 }
 
-
-
-/* Footer */
+/* Footer (consistent across devices) */
 footer {
     background: rgba(255, 255, 255, 0.2);
     color: white;
     text-align: center;
-    padding: 1.5rem; 
+    padding: 1.5rem;
     width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
 /* Responsive Design */
@@ -197,6 +199,7 @@ footer {
     cursor: pointer;
 }
 
+/* Medium Devices */
 @media (max-width: 1024px) {
     nav {
         padding: 1rem 3%;
@@ -209,9 +212,28 @@ footer {
     .nav-links a {
         font-size: 0.9rem; 
     }
+
+    .categories-section {
+        margin-left: 50px;
+        margin-right: 50px;
+        padding: 1.5rem;
+        height: 50vh; /* Adjusted height for medium screens */
+    }
+
+    .social-links {
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 10px;
+    }
+
+    .social-links a img {
+        width: 30px;
+        height: 30px;
+    }
 }
 
-
+/* Small Devices */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -242,14 +264,107 @@ footer {
     .category-box {
         flex: 1 1 calc(50% - 1.5rem);
     }
+
+    .categories-section {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 1rem;
+        height: 40vh; /* Adjusted height for small screens */
+    }
+
+    .social-links {
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+    }
+
+    .social-links a img {
+        width: 25px;
+        height: 25px;
+    }
 }
 
+/* Extra Small Devices */
 @media (max-width: 480px) {
     .category-box {
         flex: 1 1 100%;
     }
 
+    .categories-section {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 0.5rem;
+        height: 35vh; /* Adjusted height for extra small screens */
+    }
+
     footer {
         padding: 1rem; 
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    .logo h3 {
+        font-size: 8px;
+    }
+
+    .social-links {
+        left: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 5px;
+    }
+
+    .social-links a img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Very Small Devices */
+@media (max-width: 320px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav-links a {
+        font-size: 0.7rem;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    .logo h3 {
+        font-size: 6px;
+    }
+
+    .categories-section {
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 0.3rem;
+        height: 30vh; /* Adjusted height for very small screens */
+    }
+
+    .social-links {
+        left: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 3px;
+    }
+
+    .social-links a img {
+        width: 15px;
+        height: 15px;
     }
 }
