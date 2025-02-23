@@ -108,10 +108,9 @@ nav {
 
 /* Categories Section */
 .categories-section {
-    padding: 5rem;
+    padding: 2rem; 
     margin-left: 200px;
     margin-right: 200px;
-    height: auto; /* Default height on large screens (auto lets content decide) */
 }
 
 .categories-container {
@@ -138,7 +137,7 @@ nav {
 
 .category-box img {
     width: 100%;
-    height: 400px;
+    height: 350px;
     object-fit: cover;
     display: block;
 }
@@ -182,15 +181,13 @@ nav {
     transform: scale(1.1);
 }
 
-/* Footer (consistent across devices) */
+/* Footer */
 footer {
     background: rgba(255, 255, 255, 0.2);
     color: white;
     text-align: center;
-    padding: 1.5rem;
+    padding: 1.5rem; 
     width: 100%;
-    position: absolute;
-    bottom: 0;
 }
 
 /* Responsive Design */
@@ -199,31 +196,47 @@ footer {
     cursor: pointer;
 }
 
-/* Medium Devices */
 @media (max-width: 1024px) {
-    nav {
-        padding: 1rem 3%;
-    }
-
     .nav-links {
-        gap: 1.5rem;
+        display: none;
+        position: absolute;
+        top: 45px;
+        right: 5%;
+        background: rgba(255, 255, 255, 0.9);
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1001;
+        border-radius: 8px;
     }
 
-    .nav-links a {
-        font-size: 0.9rem; 
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .category-box {
+        flex: 1 1 calc(50% - 1.5rem);
+    }
+
+    .category-box img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
     }
 
     .categories-section {
-        margin-left: 50px;
-        margin-right: 50px;
-        padding: 1.5rem;
-        height: 50vh; /* Adjusted height for medium screens */
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 1rem;
     }
 
     .social-links {
-        left: 10px;
-        top: 50%;
-        transform: translateY(-50%);
         padding: 10px;
     }
 
@@ -233,7 +246,6 @@ footer {
     }
 }
 
-/* Small Devices */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -265,17 +277,20 @@ footer {
         flex: 1 1 calc(50% - 1.5rem);
     }
 
+    .category-box img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+    }
+
     .categories-section {
-        margin-left: 20px;
+        margin-left: 50px;
         margin-right: 20px;
         padding: 1rem;
-        height: 40vh; /* Adjusted height for small screens */
     }
 
     .social-links {
-        left: 10px;
-        top: 50%;
-        transform: translateY(-50%);
         padding: 8px;
     }
 
@@ -285,43 +300,16 @@ footer {
     }
 }
 
-/* Extra Small Devices */
 @media (max-width: 480px) {
+    .menu-toggle {
+        display: block;
+    }
+
     .category-box {
         flex: 1 1 100%;
     }
 
-    .categories-section {
-        margin-left: 10px;
-        margin-right: 10px;
-        padding: 0.5rem;
-        height: 35vh; /* Adjusted height for extra small screens */
-    }
-
-    footer {
-        padding: 1rem; 
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .nav-links a {
-        font-size: 0.8rem;
-    }
-
-    .logo img {
-        width: 80px;
-    }
-
-    .logo h3 {
-        font-size: 8px;
-    }
-
     .social-links {
-        left: 5px;
-        top: 50%;
-        transform: translateY(-50%);
         padding: 5px;
     }
 
@@ -329,38 +317,16 @@ footer {
         width: 20px;
         height: 20px;
     }
+
+    footer {
+        padding: 1rem; 
+    }
 }
 
-/* Very Small Devices */
 @media (max-width: 320px) {
-    .hero h1 {
-        font-size: 1.5rem;
-    }
-
-    .nav-links a {
-        font-size: 0.7rem;
-    }
-
-    .logo img {
-        width: 60px;
-    }
-
-    .logo h3 {
-        font-size: 6px;
-    }
-
-    .categories-section {
-        margin-left: 5px;
-        margin-right: 5px;
-        padding: 0.3rem;
-        height: 30vh; /* Adjusted height for very small screens */
-    }
 
     .social-links {
-        left: 5px;
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 3px;
+        padding: 1px;
     }
 
     .social-links a img {
